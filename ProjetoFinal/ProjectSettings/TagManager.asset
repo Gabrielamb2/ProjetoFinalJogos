@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Escorregador
   - Elevador
+  - Cancela
+  - Almoco
   layers:
   - Default
   - TransparentFX
