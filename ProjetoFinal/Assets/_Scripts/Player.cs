@@ -7,12 +7,13 @@ public class Player : MonoBehaviour
     private Animator anim;   
     // GameManager gm;
     private float velocidade;
+    private SpriteRenderer mySpriteRenderer;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         velocidade = 3;  
-
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
         // gm = GameManager.GetInstance();
     }
 
@@ -24,6 +25,11 @@ public class Player : MonoBehaviour
 
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
+        if(inputX < 0){
+            mySpriteRenderer.flipX = true;
+        }else if(inputX > 0){
+            mySpriteRenderer.flipX = false;
+        }
         transform.position += new Vector3(inputX, inputY, 0) * Time.deltaTime * velocidade;
 
         Vector3 pos = Camera.main.WorldToViewportPoint (transform.position);
