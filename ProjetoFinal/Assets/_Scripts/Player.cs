@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        velocidade = 3;  
+        velocidade = 2;  
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         // gm = GameManager.GetInstance();
     }
