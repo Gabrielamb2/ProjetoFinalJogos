@@ -17,7 +17,8 @@ public class GameManager
 
    private readonly Canvas _countdownUI;
 
-    
+   public int q_atual = 0;
+
     public float RunningTime;
     public float MaxTime=10.0f;
 
@@ -26,8 +27,6 @@ public class GameManager
         get => _startTime;
         private set => _startTime = value;
     }
-
-    
 
 
    public static GameManager GetInstance()
@@ -60,12 +59,14 @@ public class GameManager
     private void Reset()
     {
         vidas = 3;
+        q_atual = 0;
     }
    private GameManager()
    {
         _countdownUI = Resources.Load<Canvas>("countdownUI");
        vidas = 3;
        gameState = GameState.MENU;
+       q_atual = 0;
        
    }
 

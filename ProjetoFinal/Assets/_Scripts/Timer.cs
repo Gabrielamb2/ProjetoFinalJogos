@@ -33,6 +33,8 @@ public class Timer : MonoBehaviour
                 gm.ChangeState(GameManager.GameState.ENDGAME);
             else
                 gm.vidas--;
+
+            Debug.Log("Time Over");
             Destroy(gameObject);
         }
     }

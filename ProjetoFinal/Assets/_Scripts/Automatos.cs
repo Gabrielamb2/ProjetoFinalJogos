@@ -7,15 +7,15 @@ using System.Collections;
 public class Automatos : MonoBehaviour
 {
 
-    public GameObject instructions;  // Textou das instruçõees        public float velocidade;
-    // private Animator anim;
+    public GameObject instructions;  // Texto das instruçõees        
     private GameManager gm;
-
     public GameObject q0;
     public GameObject q1;
     public GameObject q2;
     public GameObject q3;
     public GameObject q4;
+
+    private int id;
 
     private List<Tuple<int, int>> drawnPositions = new List<Tuple<int, int>>();
 
@@ -73,45 +73,6 @@ public class Automatos : MonoBehaviour
     //    }
     }
 
-
-    void Update()
-     {
-         if (Input.GetMouseButtonDown(0))
-         {
-            //  Debug.Log("Mouse");
-             
-            // RaycastHit raycastHit;
-            //  Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //  if (Physics.Raycast(ray, out raycastHit, 100f))
-            //  {
-            //      Debug.Log("oii");
-            //      if (raycastHit.transform != null)
-            //      {
-            //         //Our custom method. 
-            //          CurrentClickedGameObject(raycastHit.transform.gameObject);
-            //      }
-            //  }
-
-            Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-            RaycastHit hit;
-            Debug.Log("Mouse");
- 
-            if (Physics.Raycast (ray, out hit, 100)) {
-                Debug.Log ("hit.transform.gameObject.name");
-                Debug.Log (hit.transform.gameObject.name);
-            }
-         }
-     }
-
-
-      public void CurrentClickedGameObject(GameObject gameObject)
-        {
-            Debug.Log($"CurrentClickedGameObject");
-            if(gameObject.tag=="q1")
-            {
-                Debug.Log($"{gameObject.tag}");
-            }
-        }
 }
 
 
