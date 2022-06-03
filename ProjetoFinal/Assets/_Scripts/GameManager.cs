@@ -20,7 +20,7 @@ public class GameManager
    public int q_atual = 0;
 
     public float RunningTime;
-    public float MaxTime=10.0f;
+    public float MaxTime=12.0f;
 
     private float _startTime;
     public float StartTime {

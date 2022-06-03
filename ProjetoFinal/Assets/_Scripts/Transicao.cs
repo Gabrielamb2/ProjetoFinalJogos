@@ -21,7 +21,7 @@ public class Transicao : MonoBehaviour
        
     }
 
-    IEnumerator LoadSceneTransition(int sceneIndex){
+    public IEnumerator LoadSceneTransition(int sceneIndex){
        transition.SetTrigger("Start");
 
        yield return new WaitForSeconds(transitionTime);

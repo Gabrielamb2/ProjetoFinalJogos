@@ -8,6 +8,8 @@ public class TuringMachine : MonoBehaviour
     private GameManager gm;
     public GameObject endscreen;
 
+    private Transicao transition;
+
     void Start()
     {
         velocidade = 6; 
@@ -34,9 +36,10 @@ public class TuringMachine : MonoBehaviour
     }
 
     private void GameLost(){
-        // gm.q_atual = 0;
-        // if (gm.vidas >0) gm.vidas--;
+        gm.q_atual = 0;
+        if (gm.vidas >0) gm.vidas--;
         // else ;
+        // transition.LoadSceneTransition(0);
         Debug.Log("Game Lost!!");
     }
 
@@ -46,10 +49,12 @@ public class TuringMachine : MonoBehaviour
         // else ;
         Invoke(nameof(End), 0.5f);
         Debug.Log("Você ganhou!!");
+        
     }
 
     void End() {
         endscreen.SetActive(true);  
+        // LoadSceneTransition(0);
     }
 
 

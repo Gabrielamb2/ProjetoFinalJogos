@@ -8,6 +8,14 @@ TagManager:
   - Elevador
   - Cancela
   - Almoco
+  - q0
+  - q1
+  - q3
+  - q4
+  - q2
+  - Robot
+  - Tilemap
+  - Door
   layers:
   - Default
   - TransparentFX
