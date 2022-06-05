@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Quarto.unity
-    guid: 3cb7110cd3e1c7449b7e644f1a0b0ba9
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Quarto.unity
+    guid: 3cb7110cd3e1c7449b7e644f1a0b0ba9
   - enabled: 1
     path: Assets/Scenes/Automatos.unity
     guid: 01424729e330a9c49b590403fa48c02a

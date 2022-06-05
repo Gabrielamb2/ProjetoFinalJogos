@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Animator anim;   
-    // GameManager gm;
+    GameManager gm;
     private float velocidade;
     private SpriteRenderer mySpriteRenderer;
     private Transicao transition;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         velocidade = 2;  
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        // gm = GameManager.GetInstance();
+        gm = GameManager.GetInstance();
         transition = FindObjectOfType<Transicao>();
 
     }
@@ -24,7 +24,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        // if (gm.gameState != GameManager.GameState.GAME) return;
+        if (gm.gameState != GameManager.GameState.GAME) return;
+        
+        if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
+            gm.ChangeState(GameManager.GameState.PAUSE);
+        }
 
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -73,6 +77,14 @@ public class Player : MonoBehaviour
         {
             Debug.Log("bateu");
             transition.LoadNextScene(1);
+        }
+
+        else if (collision.CompareTag("Almoco"))
+        {
+            if (gm.gameState == GameManager.GameState.GAME){
+                gm.victory=true;
+                gm.ChangeState(GameManager.GameState.ENDGAME);
+            }
         }
 
      

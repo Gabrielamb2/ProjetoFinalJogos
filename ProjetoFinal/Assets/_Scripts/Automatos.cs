@@ -28,8 +28,11 @@ public class Automatos : MonoBehaviour
 
     void Begin() {
         instructions.SetActive(false);  
+
+        if (gm.gameState == GameManager.GameState.GAME && (gm.current_scene == 1)) { 
         GameManager.changeStateDelegate += Construir;
         Construir();
+        }
         gm.StartTimer(); 
     }
 
@@ -60,8 +63,7 @@ public class Automatos : MonoBehaviour
 
     void Construir() {
        Debug.Log("Construir");
-       Debug.Log($"waspaused{gm.waspaused} | {gm.gameState} | {gm.gameState== GameManager.GameState.GAME}");
-    //    if (gm.gameState == GameManager.GameState.GAME && !(gm.waspaused)) { 
+     if (gm.gameState == GameManager.GameState.GAME && (gm.current_scene == 1)) { 
         foreach (Transform child in transform) {
             GameObject.Destroy(child.gameObject);
         }
@@ -70,7 +72,7 @@ public class Automatos : MonoBehaviour
         NewGameObject(q2);
         NewGameObject(q3);
         NewGameObject(q4);
-    //    }
+    }
     }
 
 }

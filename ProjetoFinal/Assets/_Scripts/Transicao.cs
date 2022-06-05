@@ -7,17 +7,28 @@ public class Transicao : MonoBehaviour
 {
    public Animator transition;
    public float transitionTime = 1f;
-    // Update is called once per frame
+   private GameManager gm;
+
+    void Start(){
+        gm = GameManager.GetInstance();
+    }
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && gm.gameState == GameManager.GameState.GAME){
             LoadNextScene(1);
         }
         
     }
     public void LoadNextScene(int scene_index){
-
+        gm.current_scene = SceneManager.GetActiveScene().buildIndex + scene_index;
         StartCoroutine(LoadSceneTransition(SceneManager.GetActiveScene().buildIndex + scene_index));
+       
+    }
+
+    public void LoadFirstScene(){
+        gm.current_scene = 0;
+        StartCoroutine(LoadSceneTransition(0));
        
     }
 

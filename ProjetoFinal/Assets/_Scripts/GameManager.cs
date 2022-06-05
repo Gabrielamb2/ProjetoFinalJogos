@@ -15,6 +15,8 @@ public class GameManager
 
    public bool waspaused = false;
 
+   public bool victory = false;
+
    private readonly Canvas _countdownUI;
 
    public int q_atual = 0;
@@ -23,6 +25,8 @@ public class GameManager
 
     public float RunningTime;
     public float MaxTime=12.0f;
+
+    public int current_scene = 0;
 
     private float _startTime;
     public float StartTime {
@@ -64,6 +68,7 @@ public class GameManager
         gameState = GameState.MENU;
         q_atual = 0;
         game_time_over = false;
+        victory = false;
 
     }
    private GameManager()
@@ -73,6 +78,7 @@ public class GameManager
        gameState = GameState.MENU;
        q_atual = 0;
        game_time_over = false;
+       victory = false;
 
        
    }

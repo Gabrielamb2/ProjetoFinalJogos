@@ -25,6 +25,11 @@ public class RoadRunner : MonoBehaviour{
     }
 
     void Update(){
+        if (!(gm.gameState == GameManager.GameState.GAME)) return;
+
+        // if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
+        //     gm.ChangeState(GameManager.GameState.PAUSE);
+        // }
 
         if (gm.game_time_over){
             gm.game_time_over=false;
