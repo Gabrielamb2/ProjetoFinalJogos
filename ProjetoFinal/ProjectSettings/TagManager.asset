@@ -16,6 +16,7 @@ TagManager:
   - Robot
   - Tilemap
   - Door
+  - P1
   layers:
   - Default
   - TransparentFX
