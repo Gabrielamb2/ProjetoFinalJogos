@@ -9,14 +9,15 @@ public class RoadRunner : MonoBehaviour{
     private bool onGround;
     private Animator anim; 
     private GameManager gm;
+    private Transicao transition;
+
 
     void Start(){
         gm = GameManager.GetInstance();
         onGround = false;
         anim = GetComponent<Animator>();
         Invoke(nameof(Begin), 1.5f);
-        
-        
+        transition = FindObjectOfType<Transicao>();  
     }
 
     void Begin() {
@@ -24,6 +25,12 @@ public class RoadRunner : MonoBehaviour{
     }
 
     void Update(){
+
+        if (gm.game_time_over){
+            gm.game_time_over=false;
+            GameLost();
+        }
+
         float inputX = Input.GetAxis("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && transform.position.y <= -2.91)
@@ -38,10 +45,22 @@ public class RoadRunner : MonoBehaviour{
     private void GameLost(){
         gm.q_atual = 0;
         if (gm.vidas >0) gm.vidas--;
+        transition.LoadNextScene(-1);
         Debug.Log("Game Lost!!");
     }
 
     private void Victory(){
+        transition.LoadNextScene(1);
         Debug.Log("Você ganhou!!");
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("P1"))
+        {
+            transition.LoadNextScene(1);
+        }
+
+     
+    } 
 }
