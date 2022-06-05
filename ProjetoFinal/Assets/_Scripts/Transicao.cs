@@ -11,13 +11,13 @@ public class Transicao : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){
-            LoadNextScene();
+            LoadNextScene(1);
         }
         
     }
-    public void LoadNextScene(){
+    public void LoadNextScene(int scene_index){
 
-        StartCoroutine(LoadSceneTransition(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadSceneTransition(SceneManager.GetActiveScene().buildIndex + scene_index));
        
     }
 

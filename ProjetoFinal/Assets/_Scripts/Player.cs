@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     // GameManager gm;
     private float velocidade;
     private SpriteRenderer mySpriteRenderer;
+    private Transicao transition;
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
         velocidade = 2;  
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         // gm = GameManager.GetInstance();
+        transition = FindObjectOfType<Transicao>();
+
     }
 
 
@@ -64,14 +67,15 @@ public class Player : MonoBehaviour
 
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.CompareTag("Escorregador") || (collision.CompareTag("Elevador"))
-    //     {
-        
-    //     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Elevador") || collision.CompareTag("Cancela"))
+        {
+            Debug.Log("bateu");
+            transition.LoadNextScene(1);
+        }
 
      
-    // }  
+    }  
 
 }

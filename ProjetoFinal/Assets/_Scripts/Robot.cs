@@ -11,6 +11,7 @@ public class Robot : MonoBehaviour
     {
         velocidade = 3; 
         gm = GameManager.GetInstance();
+        Destroy(gameObject, 8);
         
     }
 

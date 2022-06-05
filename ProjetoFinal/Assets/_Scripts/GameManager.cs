@@ -19,6 +19,8 @@ public class GameManager
 
    public int q_atual = 0;
 
+   public bool game_time_over = false;
+
     public float RunningTime;
     public float MaxTime=12.0f;
 
@@ -59,7 +61,10 @@ public class GameManager
     private void Reset()
     {
         vidas = 3;
+        gameState = GameState.MENU;
         q_atual = 0;
+        game_time_over = false;
+
     }
    private GameManager()
    {
@@ -67,6 +72,8 @@ public class GameManager
        vidas = 3;
        gameState = GameState.MENU;
        q_atual = 0;
+       game_time_over = false;
+
        
    }
 

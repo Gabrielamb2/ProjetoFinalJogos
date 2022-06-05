@@ -14,11 +14,17 @@ public class TuringMachine : MonoBehaviour
     {
         velocidade = 6; 
         gm = GameManager.GetInstance();
+        transition = FindObjectOfType<Transicao>();
         
     }
 
     void Update()
     {
+        if (gm.game_time_over){
+            gm.game_time_over=false;
+            GameLost();
+        }
+
 
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -37,9 +43,8 @@ public class TuringMachine : MonoBehaviour
 
     private void GameLost(){
         gm.q_atual = 0;
-        if (gm.vidas >0) gm.vidas--;
-        // else ;
-        // transition.LoadSceneTransition(0);
+        // if (gm.vidas >0) gm.vidas--;
+        transition.LoadNextScene(-1);
         Debug.Log("Game Lost!!");
     }
 
@@ -53,7 +58,8 @@ public class TuringMachine : MonoBehaviour
     }
 
     void End() {
-        endscreen.SetActive(true);  
+        endscreen.SetActive(true);
+        transition.LoadNextScene(1);  
         // LoadSceneTransition(0);
     }
 
