@@ -44,8 +44,8 @@ public class RoadRunner : MonoBehaviour{
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         else transform.position += new Vector3(inputX, 0, 0) * Time.deltaTime * velocidade;
 
-        if (inputX != 0) anim.SetInteger("Speed", 1);
-        else anim.SetInteger("Speed", 0);
+        if (inputX != 0) anim.SetInteger("Velocity", 1);
+        else anim.SetInteger("Velocity", 0);
 
     }
 
