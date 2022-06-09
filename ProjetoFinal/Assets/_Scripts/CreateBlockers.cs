@@ -24,7 +24,7 @@ public class CreateBlockers : MonoBehaviour{
     private void SpawnBlocker(){
         randomPrefab = GenerateRandomEnemy();
         GameObject a = Instantiate(randomPrefab) as GameObject;
-        a.transform.position = new Vector2(-7.91f, -2.77f);
+        a.transform.position = new Vector2(-7.91f, -2.91f);
     }
 
     void Update(){

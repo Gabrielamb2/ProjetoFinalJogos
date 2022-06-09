@@ -35,7 +35,7 @@ public class StairRunner : MonoBehaviour
 
     void Update()
     {
-        if (!(gm.gameState == GameManager.GameState.GAME)) return;
+        //if (!(gm.gameState == GameManager.GameState.GAME)) return;
 
         // if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
         //     gm.ChangeState(GameManager.GameState.PAUSE);
