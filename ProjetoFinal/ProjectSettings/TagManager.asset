@@ -17,7 +17,11 @@ TagManager:
   - Tilemap
   - Door
   - P1
+<<<<<<< HEAD
   - Police
+=======
+  - Tunnel
+>>>>>>> bb19132e5990b1b8f3fe69c019809fac8ba7e76c
   layers:
   - Default
   - TransparentFX
