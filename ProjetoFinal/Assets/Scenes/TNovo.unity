@@ -1783,7 +1783,7 @@ GameObject:
   - component: {fileID: 1208587281}
   m_Layer: 0
   m_Name: Police
-  m_TagString: Untagged
+  m_TagString: Police
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1895,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.5, y: 0}
@@ -2257,8 +2257,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7086523, y: -0.08437753}
-  m_Size: {x: 1.5414042, y: 3.8617969}
+  m_Offset: {x: 0.06742835, y: 1.4742246}
+  m_Size: {x: 1.758884, y: 4.984827}
   m_Direction: 0
 --- !u!95 &1410305778
 Animator:

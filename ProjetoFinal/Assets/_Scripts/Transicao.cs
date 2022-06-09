@@ -15,9 +15,9 @@ public class Transicao : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && gm.gameState == GameManager.GameState.GAME){
-            LoadNextScene(1);
-        }
+        // if(Input.GetMouseButtonDown(0) && gm.gameState == GameManager.GameState.GAME){
+        //     LoadNextScene(1);
+        // }
         
     }
     public void LoadNextScene(int scene_index){
