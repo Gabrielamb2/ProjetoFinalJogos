@@ -5,18 +5,29 @@ using UnityEngine;
 public class EscorregadorRunner : MonoBehaviour
 {
     public float velocidade;
+    GameManager gm;
+    private Transicao transition;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        gm = GameManager.GetInstance();
+        transition = FindObjectOfType<Transicao>();
+        transition.transitionTime = 0.0f;
     }
+
+
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
         float inputY = Input.GetAxis("Vertical");
-        print(inputY);
-        transform.position += new Vector3(0, inputY, 0) * velocidade;
-        print(transform.position);
+        transform.position += new Vector3(1.3f, inputY, 0) *  Time.deltaTime * velocidade;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Tunnel")){
+            Debug.Log("bateu");
+            transition.LoadNextScene(0);
+        }
+    }  
 }

@@ -17,6 +17,7 @@ TagManager:
   - Tilemap
   - Door
   - P1
+  - Tunnel
   layers:
   - Default
   - TransparentFX
