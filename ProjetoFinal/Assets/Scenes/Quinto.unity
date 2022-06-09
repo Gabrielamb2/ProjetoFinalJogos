@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 53137588}
   - component: {fileID: 53137587}
   - component: {fileID: 53137586}
+  - component: {fileID: 53137589}
   m_Layer: 0
   m_Name: Comidas
   m_TagString: Almoco
@@ -359,12 +360,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53137585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.57, y: 0.39, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 5.3772, y: -0.3596, z: 0}
+  m_LocalScale: {x: 2.3856432, y: 3.4993498, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &53137589
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53137585}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &79536165
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +521,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7086523, y: -0.08437753}
-  m_Size: {x: 1.5414042, y: 3.8617969}
+  m_Offset: {x: -0.014254707, y: -0.36255836}
+  m_Size: {x: 1.4485605, y: 1.4485605}
   m_Direction: 0
 --- !u!95 &181445921
 Animator:
@@ -592,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181445918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.89, y: -3.69, z: 0}
+  m_LocalPosition: {x: 0.48, y: -1.77, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2828,8 +2850,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985384075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.12, y: 0.52, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 3.12, y: 0.5307, z: 0}
+  m_LocalScale: {x: 2, y: 1.9786, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

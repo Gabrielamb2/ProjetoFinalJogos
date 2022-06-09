@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Transicao : MonoBehaviour
 {
    public Animator transition;
-   public float transitionTime = 1f;
+   public float transitionTime = 0.0f;
    private GameManager gm;
 
     void Start(){

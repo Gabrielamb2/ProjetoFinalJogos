@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         gm = GameManager.GetInstance();
         transition = FindObjectOfType<Transicao>();
+        transition.transitionTime = 0.5f;
 
     }
 
