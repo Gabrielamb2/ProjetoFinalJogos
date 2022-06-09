@@ -55,9 +55,6 @@ public class TuringMachine : MonoBehaviour
     }
 
     private void Victory(){
-        // gm.q_atual = 0;
-        // if (gm.vidas >0) gm.vidas--;
-        // else ;
         Invoke(nameof(End), 0.5f);
         Debug.Log("Você ganhou!!");
         
@@ -65,8 +62,7 @@ public class TuringMachine : MonoBehaviour
 
     void End() {
         endscreen.SetActive(true);
-        transition.LoadNextScene(1);  
-        // LoadSceneTransition(0);
+        transition.LoadNextScene(2);  
     }
 
 

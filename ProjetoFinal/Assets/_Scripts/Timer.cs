@@ -29,12 +29,7 @@ public class Timer : MonoBehaviour
 
         // Debug.Log($"{_timerFill.fillAmount}");
         if (gm.RunningTime < 0) {
-            if(gm.vidas <=0  && gm.gameState == GameManager.GameState.GAME) 
-                gm.ChangeState(GameManager.GameState.ENDGAME);
-            else{
-                gm.vidas--;
-                gm.game_time_over = true;
-            }
+            gm.game_time_over = true;
             Debug.Log("Time Over");
             Destroy(gameObject);
         }

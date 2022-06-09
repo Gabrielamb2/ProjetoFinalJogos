@@ -51,7 +51,6 @@ public class RoadRunner : MonoBehaviour{
 
     private void GameLost(){
         gm.q_atual = 0;
-        if (gm.vidas >0) gm.vidas--;
         transition.LoadNextScene(-1);
         Debug.Log("Game Lost!!");
     }

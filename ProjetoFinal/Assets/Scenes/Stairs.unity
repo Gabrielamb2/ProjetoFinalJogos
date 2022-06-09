@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291159216}
   - component: {fileID: 291159217}
+  - component: {fileID: 291159218}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Tilemap
@@ -384,6 +385,51 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!60 &291159218
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291159215}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 25.96058, y: 5.020859}
+      - {x: 25.934174, y: 4.0393934}
+      - {x: 22.973213, y: 4.030076}
+      - {x: 22.965324, y: 3.0472596}
+      - {x: 17.976028, y: 3.005707}
+      - {x: 17.992443, y: 1.9822224}
+      - {x: 11.994533, y: 1.9588845}
+      - {x: 12.014388, y: 0.97801244}
+      - {x: 6.9925594, y: 0.99412334}
+      - {x: 6.9834876, y: 0.020727754}
+      - {x: 4.0221195, y: -0.00896208}
+      - {x: 4.0346684, y: -0.96039903}
+      - {x: 0.015367746, y: -0.98822737}
+      - {x: 0.016492069, y: -1.9887965}
+      - {x: -3.9615571, y: -2.023965}
+      - {x: -3.9523053, y: -2.987917}
+      - {x: -8.977175, y: -3.0284266}
+      - {x: -8.966274, y: -4.979888}
+      - {x: 34.820805, y: -5.111027}
+      - {x: 33.994156, y: 4.9837117}
 --- !u!1 &540418120
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,8 +509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.21998, y: 62.27}
-  m_SizeDelta: {x: 549.44, y: 382.55}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605587845
 MonoBehaviour:
@@ -791,29 +837,13 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1331562642}
     m_ColliderPaths:
-    - - X: 30000100
-        Y: -49999959
-      - X: 30000100
+    - - X: 350000000
         Y: -50000000
-      - X: 339999900
-        Y: -50000000
-      - X: 339999900
-        Y: -50000041
-      - X: 339999959
-        Y: -50000100
-      - X: 350000041
-        Y: -50000100
-      - X: 350000100
-        Y: -50000041
-      - X: 350000100
-        Y: 140000041
-      - X: 350000041
-        Y: 140000100
-      - X: 339999959
-        Y: 140000100
-      - X: 339999900
-        Y: 140000041
-      - X: 339999900
+      - X: 350000000
+        Y: 140000000
+      - X: 340000000
+        Y: 140000000
+      - X: 340000000
         Y: 50000000
       - X: 260000000
         Y: 50000000
@@ -855,20 +885,12 @@ CompositeCollider2D:
         Y: 110000000
       - X: -100000000
         Y: -50000000
-      - X: -30000100
-        Y: -50000000
-      - X: -30000100
-        Y: -49999959
-      - X: -30000041
-        Y: -49999900
-      - X: 30000041
-        Y: -49999900
   m_CompositePaths:
     m_Paths:
-    - - {x: 34.999973, y: -5.00001}
-      - {x: 34.999973, y: 14.00001}
-      - {x: 33.999992, y: 13.999974}
-      - {x: 33.99996, y: 5}
+    - - {x: 34.999973, y: -5}
+      - {x: 34.999973, y: 14}
+      - {x: 34, y: 13.999971}
+      - {x: 33.999973, y: 5}
       - {x: 26, y: 4.999971}
       - {x: 25.999971, y: 4}
       - {x: 23, y: 3.999971}

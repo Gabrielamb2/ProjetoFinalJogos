@@ -8,7 +8,6 @@ public class GameManager
 {
    public enum GameState { MENU, GAME, PAUSE, ENDGAME };
    public GameState gameState { get; private set; }
-   public int vidas;
   
    public bool pause_to_menu = false;
    private static GameManager _instance;
@@ -64,7 +63,6 @@ public class GameManager
 
     private void Reset()
     {
-        vidas = 3;
         gameState = GameState.MENU;
         q_atual = 0;
         game_time_over = false;
@@ -74,7 +72,6 @@ public class GameManager
    private GameManager()
    {
         _countdownUI = Resources.Load<Canvas>("countdownUI");
-       vidas = 3;
        gameState = GameState.MENU;
        q_atual = 0;
        game_time_over = false;

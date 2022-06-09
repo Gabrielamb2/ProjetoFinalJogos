@@ -20,16 +20,16 @@ public class Player : MonoBehaviour
 
     }
 
-
+    void Update(){
+         if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
+            gm.ChangeState(GameManager.GameState.PAUSE);
+        }
+    }
 
     void FixedUpdate()
     {
         if (gm.gameState != GameManager.GameState.GAME) return;
         
-        if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
-            gm.ChangeState(GameManager.GameState.PAUSE);
-        }
-
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
         if(inputX < 0){
@@ -77,6 +77,10 @@ public class Player : MonoBehaviour
         {
             Debug.Log("bateu");
             transition.LoadNextScene(1);
+        }
+
+        else if ( collision.CompareTag("Escorregador") ){
+            transition.LoadNextScene(2);
         }
 
         else if (collision.CompareTag("Almoco"))

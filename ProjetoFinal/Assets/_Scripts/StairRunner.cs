@@ -84,9 +84,6 @@ public class StairRunner : MonoBehaviour
 
     private void GameLost(){
         gm.q_atual = 0;
-        if (gm.vidas >0) gm.vidas--;
-        // else ;
-        // transition.LoadSceneTransition(0);
         transition.LoadNextScene(-1);
         Debug.Log("Game Lost!!");
     }

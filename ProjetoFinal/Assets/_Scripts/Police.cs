@@ -8,7 +8,7 @@ public class Police : MonoBehaviour
     // GameManager gm;
     private SpriteRenderer mySpriteRenderer;
     public float inputY;
-    float x_player;
+    float y_player;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -24,15 +24,15 @@ public class Police : MonoBehaviour
         // if (gm.gameState != GameManager.GameState.GAME) return;
 
         float inputX = Input.GetAxis("Horizontal");
-        if(inputX < 0){ //para tras
-            mySpriteRenderer.flipX = true;
-        }else if(inputX > 0){
-            mySpriteRenderer.flipX = false;
-        }
+        // if(inputX < 0){ //para tras
+        //     mySpriteRenderer.flipX = true;
+        // }else if(inputX > 0){
+        //     mySpriteRenderer.flipX = false;
+        // }
 
-        x_player = GameObject.Find("Player").transform.position.x - inputX;
+        y_player = GameObject.Find("Player").transform.position.y ;
         Vector3 tmpPosition = transform.position;
-        tmpPosition.x = x_player;
+        tmpPosition.y = y_player;
         transform.position = tmpPosition;
 
         Vector3 pos = Camera.main.WorldToViewportPoint (transform.position);
@@ -43,17 +43,17 @@ public class Police : MonoBehaviour
         if (transform.position.y <= -screen_size)
             transform.position = new Vector3(transform.position.x, -screen_size, transform.position.z);
 
-        Debug.Log(inputX);
-        if ( inputX != 0)
-        {
-            anim.SetFloat("Velocity", 1.0f);
-            Debug.Log("Walking\n");
-        }
-        else
-        {
-            anim.SetFloat("Velocity", 0.0f);
-            Debug.Log("Idle\n");
-        }
+        // Debug.Log(inputX);
+        // if (inputY != 0)
+        // {
+        //     anim.SetFloat("Velocity", 1.0f);
+        //     Debug.Log("Walking\n");
+        // }
+        // else
+        // {
+        //     anim.SetFloat("Velocity", 0.0f);
+        //     Debug.Log("Idle\n");
+        // }
 
        
     //    if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME) {
@@ -76,5 +76,12 @@ public class Police : MonoBehaviour
 
      
     // }  
+    private void OnTriggerEnter2D(Collider2D collision)
+   {
+       if (collision.gameObject.CompareTag("Player"))
+       {
+          Debug.Log("colidiu");
+       }
+   }
 
 }

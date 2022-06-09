@@ -5,10 +5,18 @@ public class UI_FimDeJogo : MonoBehaviour
 {
     public Text message;
     GameManager gm;
+    private Transicao transition;
+
+    
+    void Start(){
+        transition = FindObjectOfType<Transicao>();
+    }
  
      public void Voltar()
     {
+        transition.LoadFirstScene();
         gm.ChangeState(GameManager.GameState.GAME);
+        
     }
 
     public void Sair() 
@@ -23,6 +31,7 @@ public class UI_FimDeJogo : MonoBehaviour
 
     private void OnEnable()
     {
+        
         float minutes, seconds;
         string text;
         gm = GameManager.GetInstance();

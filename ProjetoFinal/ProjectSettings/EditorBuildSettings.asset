@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Automatos.unity
     guid: 01424729e330a9c49b590403fa48c02a
   - enabled: 1
+    path: Assets/Scenes/Escorregador.unity
+    guid: 5663652e6c494ea4ea0fc6321b0cbc8b
+  - enabled: 1
     path: Assets/Scenes/TNovo.unity
     guid: f0fd47c9b521d554d9c7e2a1fda1ea5e
   - enabled: 1
