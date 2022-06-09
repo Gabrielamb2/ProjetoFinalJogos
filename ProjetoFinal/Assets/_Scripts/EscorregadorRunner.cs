@@ -27,7 +27,6 @@ public class EscorregadorRunner : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Tunnel")){
-            Debug.Log("bateu");
             transition.LoadNextScene(-2);
         }
 

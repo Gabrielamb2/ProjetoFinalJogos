@@ -91,6 +91,10 @@ public class Player : MonoBehaviour
                 gm.ChangeState(GameManager.GameState.ENDGAME);
             }
         }
+        else if ( collision.CompareTag("Police") ){
+             Debug.Log("police");
+            transition.LoadNextScene(1);
+        }
 
      
     }  
