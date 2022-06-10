@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Automatos 1.unity
     guid: dff70dc7764e41c4f86dfd310bd18789
   - enabled: 1
+    path: Assets/Scenes/Automatos 2.unity
+    guid: 2427877d11e90074bb2e65d6211ed5ac
+  - enabled: 1
+    path: Assets/Scenes/Automatos 3.unity
+    guid: 82dd30a1dc622cd4b88cc3cb163698eb
+  - enabled: 1
     path: Assets/Scenes/Road.unity
     guid: a993167318cc77c4eb27b1765f9d2c24
   - enabled: 1
